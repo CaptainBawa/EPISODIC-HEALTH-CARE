@@ -10,6 +10,11 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: rgb(232, 242, 242);
+    color: #333;
+}
+
+ul {
+    list-style: none;
 }
 
 header {
@@ -70,4 +75,29 @@ header button {
   
   header .menu__icon :nth-child(2) {
     width: 50%;
+  }
+
+  .menu__items {
+    width: 45%;
+    position: absolute;
+    top: 3.55rem;
+    right: 1rem;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .menu__items ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    font-size: 1.3rem;
+  }
+
+  .menu__icon .close-icon {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    color: #333;
   }
