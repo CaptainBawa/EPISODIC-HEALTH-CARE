@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import ehc from '../assets/ehc.png';
 
 const Header = () => {
@@ -14,8 +14,8 @@ const Header = () => {
         <img src={ehc} alt="Episodic Health Care" />
       </div>
       <div className="background">
-        <button className="menu-icon" onClick={toggleMenu}>
-        {menuOpen ? (
+        <button type="button" className="menu-icon" onClick={toggleMenu}>
+          {menuOpen ? (
             <div className="close-icon">X</div>
           ) : (
             <>
