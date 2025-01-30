@@ -9,7 +9,7 @@
 #root,
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(232, 242, 242);
+    background-color: rgb(236, 236, 236);
     color: #333;
 }
 
@@ -50,7 +50,7 @@ header button {
     align-items: center;
   }
   
-  header .menu__icon {
+  header .menu-icon {
     width: 32px;
     height: 32px;
     padding: 4px;
@@ -60,7 +60,7 @@ header button {
     transition: transform .4s;
   }
   
-  header .menu__icon span {
+  header .menu-icon span {
     width: 100%;
     height: 0.25rem;
     border-radius: 0.125rem;
@@ -69,15 +69,15 @@ header button {
     transition: width .4s, transform .4s, background-color .4s;
   }
   
-  header .menu__icon :nth-child(1) {
+  header .menu-icon :nth-child(1) {
     width: 75%;
   }
   
-  header .menu__icon :nth-child(2) {
+  header .menu-icon :nth-child(2) {
     width: 50%;
   }
 
-  .menu__items {
+  .menu-items {
     width: 45%;
     position: absolute;
     top: 3.55rem;
@@ -86,9 +86,10 @@ header button {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     border-radius: 1rem;
+    z-index: 1000;
   }
 
-  .menu__items ul {
+  .menu-items ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,8 +97,45 @@ header button {
     font-size: 1.3rem;
   }
 
-  .menu__icon .close-icon {
+  .menu-icon .close-icon {
     margin: 0 auto;
     font-size: 1.5rem;
     color: #333;
+  }
+
+  .buttons-container,
+  .sub-banners-container,
+  .buttons-container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin: 2% auto;
+  }
+
+  .buttons-container {
+    justify-content: flex-start;
+    gap: 2.5rem;
+    white-space: nowrap;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 0 6%;
+  }
+
+  .buttons-container div h4 {
+    color: #243137;
+    font-weight: 700;
+    font-size: 0.8em;
+    transition: 400ms;
+  }
+
+  .buttons-container div img {
+    width: 30%;
+    height: 4vh;
+  }
+
+  .sub-banners-container img {
+    width: 45%;
   }
