@@ -14,7 +14,7 @@ const Header = () => {
         <img src={ehc} alt="Episodic Health Care" />
       </div>
       <div className="background">
-        <button className="menu__icon" onClick={toggleMenu}>
+        <button className="menu-icon" onClick={toggleMenu}>
         {menuOpen ? (
             <div className="close-icon">X</div>
           ) : (
@@ -27,7 +27,7 @@ const Header = () => {
         </button>
       </div>
       {menuOpen && (
-        <div className="menu__items">
+        <div className="menu-items">
           <ul>
             <li>Home</li>
             <li>About Us</li>
