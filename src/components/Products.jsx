@@ -11,28 +11,28 @@ const Products = () => {
       name: 'Product 1',
       description: 'This is a description of product 1',
       price: 100,
-      image: { manu },
+      image: manu,
     },
     {
       id: 2,
       name: 'Product 2',
       description: 'This is a description of product 2',
       price: 200,
-      image: { spakan },
+      image: spakan,
     },
     {
       id: 3,
       name: 'Product 3',
       description: 'This is a description of product 3',
       price: 200,
-      image: { lita },
+      image: lita,
     },
     {
       id: 4,
       name: 'Product 4',
       description: 'This is a description of product 4',
       price: 200,
-      image: { lippan },
+      image: lippan,
     },
   ];
   return (
