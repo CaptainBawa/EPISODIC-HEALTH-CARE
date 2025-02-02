@@ -284,3 +284,86 @@ header button {
   background-color: #f44336;
   color: white;
 }
+
+.testimonies {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonies h2 {
+  font-size: 2.5rem;
+  color: #2d3436;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonies-container {
+  display: flex;
+  transition: transform 0.3s ease;
+  margin: 0 -1rem;
+}
+
+.testimony {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 0 0 calc(33.333% - 2rem);
+  margin: 0 1rem;
+  min-width: 300px;
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.prev {
+  left: -1.6rem;
+}
+
+.next {
+  right: 0rem;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: #2d3436;
+  transform: scale(1.2);
+}
