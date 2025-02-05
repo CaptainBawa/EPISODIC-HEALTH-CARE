@@ -11,6 +11,7 @@ const Products = () => {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
+  const [quantity, setQuantity] = useState('1');
 
   const products = [
     {
@@ -45,14 +46,18 @@ const Products = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const parsedQuantity = quantity === '' ? 1 : parseInt(quantity, 10);
     // Handle form submission here (e.g., API call)
     console.log('Order Details:', {
       product: selectedProduct,
+      quantity: parsedQuantity,
+      total: selectedProduct.price * parsedQuantity,
       customer: { name, address, phone },
     });
     // Reset form and close modal
     setShowOrderForm(false);
     setSelectedProduct(null);
+    setQuantity('1');
     setName('');
     setAddress('');
     setPhone('');
@@ -98,11 +103,27 @@ const Products = () => {
               {selectedProduct?.name}
             </h3>
             <p className="form-price">
-              Price: GH₵
-              {selectedProduct?.price}
+              Total Price: GH₵
+              {' '}
+              {selectedProduct?.price * (quantity === '' ? 1 : parseInt(quantity, 10))}
             </p>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
+                <label htmlFor="Quantity">
+                  Quantity:
+                  <input
+                    type="number"
+                    min="1"
+                    value={quantity}
+                    onChange={(e) => {
+                      const { value } = e.target;
+                      if (value === '' || /^[1-9]\d*$/.test(value)) {
+                        setQuantity(value);
+                      }
+                    }}
+                    required
+                  />
+                </label>
                 <label htmlFor="Full Name">
                   Full Name:
                   <input
@@ -141,7 +162,10 @@ const Products = () => {
                 <button
                   type="button"
                   className="cancel-btn"
-                  onClick={() => setShowOrderForm(false)}
+                  onClick={() => {
+                    setShowOrderForm(false);
+                    setQuantity(1);
+                  }}
                 >
                   Cancel
                 </button>
