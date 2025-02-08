@@ -48,7 +48,7 @@ const Products = () => {
     e.preventDefault();
     const parsedQuantity = quantity === '' ? 1 : parseInt(quantity, 10);
     // Handle form submission here (e.g., API call)
-    console.log('Order Details:', {
+    console.log('Order Details..:', {
       product: selectedProduct,
       quantity: parsedQuantity,
       total: selectedProduct.price * parsedQuantity,
