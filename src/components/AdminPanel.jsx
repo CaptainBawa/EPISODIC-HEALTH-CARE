@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { toast } from 'react-toastify';
 import supabase from './supabaseClient';
 
 const AdminPanel = () => {
@@ -19,7 +20,7 @@ const AdminPanel = () => {
       .select('*')
       .order('created_at', { ascending: false });
 
-    if (error) throw new Error('Error fetching products:', error);
+    if (error) toast.error(`Error fetching products:', ${error.message}`);
     else setProducts(data);
   };
 
@@ -62,7 +63,7 @@ const AdminPanel = () => {
       setEditingProduct(null);
       await fetchProducts();
     } catch (error) {
-      throw new Error('Error saving product:', error);
+      toast.error(`Error saving product:', ${error.message}`);
     }
   };
 
@@ -77,7 +78,7 @@ const AdminPanel = () => {
   };
 
   const handleDelete = async (productId) => {
-    if (window.confirm('Are you sure you want to delete this product?')) {
+    if (toast.warning('Are you sure you want to delete this product?')) {
       try {
         const { error } = await supabase
           .from('products')
@@ -87,7 +88,7 @@ const AdminPanel = () => {
         if (error) throw error;
         await fetchProducts();
       } catch (error) {
-        throw new Error('Error deleting product:', error);
+        toast.error(`Error deleting product:, ${error.message}`);
       }
     }
   };
@@ -124,7 +125,7 @@ const AdminPanel = () => {
         product_image: publicUrl,
       }));
     } catch (error) {
-      console.error('Upload error:', error);
+      toast.error(`Upload error:, ${error.message}`);
     } finally {
       setIsUploading(false);
     }
