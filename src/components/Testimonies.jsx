@@ -60,7 +60,7 @@ const Testimonies = () => {
             onKeyDown={(e) => handleDotKeyDown(e, index)}
             role="tab"
             type="button"
-            key={0}
+            key={`${index + 1}`}
             aria-label={`Testimony ${index + 1}`}
             aria-selected={index === activeIndex}
             tabIndex={0}
