@@ -10,11 +10,16 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: rgb(236, 236, 236);
-    color: #333;
+    color: #4a5568;
 }
 
 ul {
     list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #4a5568;
 }
 
 header {
@@ -100,7 +105,6 @@ header button {
   .menu-icon .close-icon {
     margin: 0 auto;
     font-size: 1.5rem;
-    color: #333;
   }
 
   .buttons-container,
@@ -125,7 +129,6 @@ header button {
   }
 
   .buttons-container div h4 {
-    color: #243137;
     font-weight: 700;
     font-size: 0.8em;
     transition: 400ms;
@@ -149,7 +152,7 @@ header button {
 
   .pro-title {
     text-align: center;
-    text-decoration: underline;
+    margin: 1rem 0 2rem 0;
   }
 
   .card {
@@ -226,7 +229,6 @@ header button {
 
 .modal-content h3 {
   margin-top: 0;
-  color: #333;
 }
 
 .form-group {
@@ -236,7 +238,6 @@ header button {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #666;
 }
 
 .form-group input,
@@ -277,12 +278,10 @@ header button {
 
 .submit-btn {
   background-color: #4CAF50;
-  color: white;
 }
 
 .cancel-btn {
   background-color: #f44336;
-  color: white;
 }
 
 .testimonies {
@@ -294,10 +293,8 @@ header button {
 }
 
 .testimonies h2 {
-  font-size: 2.5rem;
-  color: #2d3436;
-  margin-bottom: 1rem;
-  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .slider-wrapper {
@@ -366,4 +363,139 @@ header button {
 .dot.active {
   background-color: #2d3436;
   transform: scale(1.2);
+}
+
+.image {
+  padding: 1rem;
+}
+
+.testimony img {
+  width: 17rem;
+  height: auto;
+}
+
+.directions-container {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.directions-title,
+#contact h2,
+#about h2,
+#services h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.routes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.route-card,
+#contact,
+#about,
+#services {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.route-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.marker-icon {
+  color: #e53e3e;
+  font-size: 1.5rem;
+}
+
+.starting-point {
+  margin: 0;
+  color: #2a4365;
+  font-size: 1.1rem;
+}
+
+.route-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.step-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.step-number {
+  background-color: #3182ce;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+.step-content {
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.arrow-icon {
+  color: #718096;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+#contact,
+#about,
+#services {
+  width: 91%;
+  margin: auto auto 1rem auto;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+#services ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  justify-content: center;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 0.3rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+footer p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+footer p:first-child {
+  font-weight: 300;
+  color: #bdc3c7;
+}
+
+footer p:last-child {
+  font-weight: 600;
+  color: #fff;
 }

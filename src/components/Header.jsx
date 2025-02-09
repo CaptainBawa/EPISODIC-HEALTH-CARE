@@ -29,10 +29,10 @@ const Header = () => {
       {menuOpen && (
         <div className="menu-items">
           <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Contact</li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       )}
