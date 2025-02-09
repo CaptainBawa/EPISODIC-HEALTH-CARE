@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import manu from '../assets/manu.png';
-import spakan from '../assets/spakan.png';
-import lita from '../assets/lita.png';
-import lippan from '../assets/lippan.png';
+import React, { useState, useEffect } from 'react';
+import supabase from './supabaseClient';
+// import manu from '../assets/manu.png';
+// import spakan from '../assets/spakan.png';
+// import lita from '../assets/lita.png';
+// import lippan from '../assets/lippan.png';
 import buy from '../assets/buy.png';
 
 const Products = () => {
@@ -12,56 +13,62 @@ const Products = () => {
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
   const [quantity, setQuantity] = useState('1');
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const products = [
-    {
-      id: 1,
-      name: 'Product 1',
-      description: 'This is a description of product 1',
-      price: 100,
-      image: manu,
-    },
-    {
-      id: 2,
-      name: 'Product 2',
-      description: 'This is a description of product 2',
-      price: 200,
-      image: spakan,
-    },
-    {
-      id: 3,
-      name: 'Product 3',
-      description: 'This is a description of product 3',
-      price: 200,
-      image: lita,
-    },
-    {
-      id: 4,
-      name: 'Product 4',
-      description: 'This is a description of product 4',
-      price: 200,
-      image: lippan,
-    },
-  ];
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('products')
+          .select('*')
+          .order('created_at', { ascending: false });
 
-  const handleSubmit = (e) => {
+        if (error) throw error;
+        setProducts(data);
+      } catch (error) {
+        throw new Error('Error fetching products:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const parsedQuantity = quantity === '' ? 1 : parseInt(quantity, 10);
-    // Handle form submission here (e.g., API call)
-    console.log('Order Details..:', {
-      product: selectedProduct,
-      quantity: parsedQuantity,
-      total: selectedProduct.price * parsedQuantity,
-      customer: { name, address, phone },
-    });
-    // Reset form and close modal
-    setShowOrderForm(false);
-    setSelectedProduct(null);
-    setQuantity('1');
-    setName('');
-    setAddress('');
-    setPhone('');
+
+    try {
+      const { error } = await supabase
+        .from('orders')
+        .insert([{
+          product_id: selectedProduct.id,
+          quantity: parsedQuantity,
+          total: selectedProduct.price * parsedQuantity,
+          customer_name: name,
+          customer_address: address,
+          customer_phone: phone,
+        }]);
+
+      if (error) throw error;
+
+      // Reset form and close modal
+      setShowOrderForm(false);
+      setSelectedProduct(null);
+      setQuantity('1');
+      setName('');
+      setAddress('');
+      setPhone('');
+
+      alert('Order placed successfully!');
+    } catch (error) {
+      throw new Error('Error placing order:', error);
+    }
   };
+
+  if (loading) return <div>Loading products...</div>;
 
   return (
     <section>
@@ -69,7 +76,7 @@ const Products = () => {
       <div className="products-container">
         {products.map((product) => (
           <div key={product.id} className="card">
-            <img className="card-img" src={product.image} alt={product.name} />
+            <img className="card-img" src={product.product_image} alt={product.name} />
             <div className="card-info">
               <h3 className="text-title">{product.name}</h3>
               <p>{product.description}</p>
