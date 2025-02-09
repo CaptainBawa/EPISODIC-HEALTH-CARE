@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 import supabase from './supabaseClient';
-// import manu from '../assets/manu.png';
-// import spakan from '../assets/spakan.png';
-// import lita from '../assets/lita.png';
-// import lippan from '../assets/lippan.png';
 import buy from '../assets/buy.png';
 
 const Products = () => {
@@ -27,7 +24,7 @@ const Products = () => {
         if (error) throw error;
         setProducts(data);
       } catch (error) {
-        throw new Error('Error fetching products:', error);
+        toast.error(`Error fetching products:', ${error.message}`);
       } finally {
         setLoading(false);
       }
@@ -62,9 +59,9 @@ const Products = () => {
       setAddress('');
       setPhone('');
 
-      alert('Order placed successfully!');
+      toast.success('Order placed successfully!');
     } catch (error) {
-      throw new Error('Error placing order:', error);
+      toast.error(`Error placing order: ${error.message}`);
     }
   };
 
