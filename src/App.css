@@ -383,7 +383,11 @@ header button {
 .directions-title,
 #contact h2,
 #about h2,
-#services h2 {
+#services h2,
+.modify-product h3,
+.add-product h3,
+.orders h3,
+.modal-content h4 {
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -503,7 +507,7 @@ footer p:last-child {
 .admin-panel {
   max-width: 1200px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 0 0.3rem;
 }
 
 .admin-panel h2 {
@@ -513,7 +517,32 @@ footer p:last-child {
   margin-bottom: 2rem;
   border-bottom: 2px solid #3498db;
   padding-bottom: 0.5rem;
-  display: inline-block;
+}
+
+.admin-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.admin-navigation button {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section {
+  margin-bottom: 1rem;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .product-form {
@@ -527,8 +556,8 @@ footer p:last-child {
 .product-form input,
 .product-form textarea {
   width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0.7rem;
   border: 2px solid #e0e0e0;
   border-radius: 5px;
   font-size: 1rem;
@@ -542,14 +571,13 @@ footer p:last-child {
 }
 
 .product-form button[type="submit"] {
-  background: #3498db;
-  color: white;
+  background-color: #3498db;
+  color: #fff;
   border: none;
   padding: 1rem 2rem;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
-  transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -562,14 +590,26 @@ footer p:last-child {
 }
 
 .product-item {
-  background: white;
+  background-color: #fff;
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.product-item h3 {
+.product-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-item img,
+.product-form img {
+  width: 15%;
+}
+
+.product-item h4 {
   color: #2c3e50;
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
@@ -581,19 +621,13 @@ footer p:last-child {
   margin-bottom: 0.5rem;
 }
 
-.product-item .price {
-  color: #27ae60;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.admin-actions {
-  margin-top: 1rem;
+.modify-options {
   display: flex;
   gap: 0.5rem;
+  margin-top: 1rem;
 }
 
-.admin-actions button {
+.modify-options button {
   flex: 1;
   padding: 0.5rem 1rem;
   border: none;
@@ -601,12 +635,199 @@ footer p:last-child {
   font-weight: 500;
 }
 
-.admin-actions button:first-child {
-  background: #3498db;
-  color: white;
+.modify-options button:first-child {
+  background-color: #3498db;
+  color: #fff;
 }
 
-.admin-actions button:last-child {
-  background: #e74c3c;
-  color: white;
+.modify-options button:last-child {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.orders-table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1rem;
+}
+
+.orders button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.orders table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders table th,
+.orders table td {
+  padding: 0.5rem;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.orders table th {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.orders table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.admin-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.admin-modal-overlay .modal-content {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 95%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: #e74c3c;
+}
+
+.status-select {
+  padding: 0.2rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+
+@media (min-width: 768px) {
+  header {
+    padding: 1rem 2rem;
+  }
+  header img {
+    width: 4rem;
+  }
+  
+  .menu-items {
+    width: 35%;
+    top: 4rem;
+    right: 2rem;
+  }
+  
+  .buttons-container {
+    gap: 3rem;
+    padding: 0 4%;
+  }
+  
+  .products-container {
+    padding: 1rem 2rem;
+    justify-content: space-between;
+  }
+  .card {
+    width: 45%;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonies {
+    padding: 3rem;
+  }
+  .testimony {
+    flex: 0 0 calc(50% - 2rem);
+  }
+  
+  .routes-grid {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 1rem 3rem;
+  }
+  header img {
+    width: 5rem;
+  }
+
+  .contact-services-about {
+    display: flex;
+    margin: 0 auto;
+    width: 92%;
+  }
+
+  #contact,
+  #about,
+  #services {
+    width: 32%;
+  }
+  
+  .menu-items {
+    width: 25%;
+    top: 4.5rem;
+    right: 3rem;
+  }
+  
+  .buttons-container {
+    padding: 0 5%;
+  }
+  
+  .products-container {
+    padding: 1rem 3rem;
+    justify-content: space-between;
+  }
+  .card {
+    width: 22%;
+    margin-bottom: 2rem;
+  }
+  .product-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .testimonies {
+    padding: 4rem;
+  }
+  .testimony {
+    flex: 0 0 calc(33.333% - 2rem); 
+  }
+  .slider-arrow {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .routes-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  footer {
+    padding: 0.5rem 2rem;
+  }
+  
+  .admin-panel {
+    margin: 3rem auto;
+    padding: 0 2rem;
+  }
 }
