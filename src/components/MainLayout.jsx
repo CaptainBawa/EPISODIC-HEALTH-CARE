@@ -19,9 +19,11 @@ const MainLayout = () => (
     <Testimonies />
     <Gallery />
     <HealthcareDirections routes={locationRoutes} />
-    <Contact />
-    <Services />
-    <About />
+    <div className="contact-services-about">
+      <Contact />
+      <Services />
+      <About />
+    </div>
     <Footer />
   </>
 );
