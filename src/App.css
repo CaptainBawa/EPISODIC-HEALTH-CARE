@@ -402,6 +402,23 @@ header button {
   margin-left: 0.5rem;
 }
 
+header h3 {
+  font-size: 1.4rem;
+}
+
+.order-note {
+  background-color: #f8f9fa;
+  border-left: 4px solid #007bff;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.order-note strong {
+  color: #004085;
+}
+
 #about p {
   text-align: justify;
   line-height: 1.3;
