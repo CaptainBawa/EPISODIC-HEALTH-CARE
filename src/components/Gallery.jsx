@@ -8,6 +8,11 @@ import pro2 from '../assets/pro2.jpg';
 import opd2 from '../assets/opd2.jpg';
 import lab1 from '../assets/lab1.jpg';
 import scan1 from '../assets/scan1.jpg';
+import despen4 from '../assets/despen4.jpg';
+import opd4 from '../assets/opd4.jpg';
+import pro3 from '../assets/pro3.jpg';
+import pro6 from '../assets/pro6.jpg';
+import pro9 from '../assets/pro9.jpg';
 
 const Gallery = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -57,6 +62,31 @@ const Gallery = () => {
       id: 9,
       title: 'SCAN ROOM',
       img: scan1,
+    },
+    {
+      id: 10,
+      title: 'DISPENSARY',
+      img: despen4,
+    },
+    {
+      id: 11,
+      title: 'OPD',
+      img: opd4,
+    },
+    {
+      id: 12,
+      title: 'PRODUCTION CENTER',
+      img: pro3,
+    },
+    {
+      id: 13,
+      title: 'PRODUCTION CENTER',
+      img: pro6,
+    },
+    {
+      id: 14,
+      title: 'PRODUCTION CENTER',
+      img: pro9,
     },
   ];
 
