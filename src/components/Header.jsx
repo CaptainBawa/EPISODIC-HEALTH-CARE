@@ -13,6 +13,7 @@ const Header = () => {
       <div>
         <img src={ehc} alt="Episodic Health Care" />
       </div>
+      <h3>Episodic Health Care</h3>
       <div className="background">
         <button type="button" className="menu-icon" onClick={toggleMenu}>
           {menuOpen ? (
