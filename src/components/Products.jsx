@@ -111,6 +111,16 @@ const Products = () => {
               {' '}
               {selectedProduct?.price * (quantity === '' ? 1 : parseInt(quantity, 10))}
             </p>
+
+            <div className="order-note">
+              <strong>Please note:</strong>
+              {' '}
+              We will call you at the provided phone number
+              to confirm your order before processing. Payment will be made via mobile money
+              after order confirmation. Ensure your phone number is correct to receive
+              the payment details.
+            </div>
+
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="Quantity">
