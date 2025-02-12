@@ -6,11 +6,15 @@ const Services = () => (
     <ul>
       <li>General Health Care</li>
       {' | '}
-      <li>Scan Center</li>
+      <li>Ultrasound/Scan Center</li>
       {' | '}
       <li>Laboratory</li>
       {' | '}
       <li>Physiotherapy</li>
+      {' | '}
+      <li>Detoxification</li>
+      {' | '}
+      <li>Dietary Advice</li>
     </ul>
   </div>
 );
