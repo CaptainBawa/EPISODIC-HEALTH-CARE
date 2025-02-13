@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import medi from '../assets/medi.jpg';
+import holi from '../assets/holi.png';
 import delivery from '../assets/delivery.png';
 import payment from '../assets/payment.png';
 import shop from '../assets/shop.png';
@@ -9,12 +9,16 @@ import help from '../assets/help.png';
 import service from '../assets/service.png';
 import drug from '../assets/drug.jpg';
 import drugs from '../assets/drugs.jpg';
+import lip from '../assets/lip.png';
 
 const CarouselSlider = () => (
   <section>
     <Carousel showThumbs={false} showArrows infiniteLoop autoPlay interval={5000}>
       <div className="carousel_img_container">
-        <img src={medi} alt="banner" />
+        <img src={holi} alt="banner" />
+      </div>
+      <div className="carousel_img_container">
+        <img src={lip} alt="banner" />
       </div>
     </Carousel>
     <div className="buttons-container">

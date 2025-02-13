@@ -6,18 +6,61 @@ const Testimonies = () => {
   const testimonies = [
     {
       id: 1,
-      name: 'John Doe',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      name: 'Aisha',
+      text: `My 19 year old daughter, Fatima, battled relentless fever and fatigue from malaria.
+      She barely ate, and I feared hospital stay. A friend recommended Manu Mixture
+      and within days, her fever FcBrokenLink, and her appetite returned, gaining strength naturally.`,
     },
     {
       id: 2,
-      name: 'Jane Smith',
-      text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      name: 'Kwame Ansah',
+      text: `I contracted malaria while traveling, and my appetite vanished completely. A local healer introduced me to Manu Mixture.
+      Within 48 hours, my chills stopped, and the mixture’s gentle herbal taste sparked my hunger again. I avoided harsh meds and
+      regained my strength naturally. Manu Mixture is now my go-to remedy`,
     },
     {
       id: 3,
-      name: 'Mike Johnson',
-      text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      name: 'Yaa Mansah',
+      text: `My entire household battled typhoid last rainy season. My youngest couldn’t keep food down, and we were desperate. A neighbor shared Manu Mixture.
+      We drank it daily—fevers broke, energy surged, and even my picky eater asked for meals! This blend saved us without a single pill`,
+    },
+    {
+      id: 4,
+      name: 'Frank Obeng',
+      text: `As a teacher surrounded by germs, I used to catch every cold and flu. Since taking Manu Lita Mixture, my immune system feels bulletproof! This winter, I didn’t
+      miss a single day of work. Even my seasonal allergies vanished. My secret? A daily spoonful of this earthy-sweet tonic. It’s like armor for the body.`,
+    },
+    {
+      id: 5,
+      name: 'Hannah Asante',
+      text: `After my baby, I was drained and sick nonstop. A midwife recommended Manu Lita Mixture for immune support,
+      it gently restored my strength. I’m finally keeping up with my toddler and staying healthy. This mix is a mama’s lifesaver.`,
+    },
+    {
+      id: 6,
+      name: 'Winifred Agyemang',
+      text: `For years, my periods left me bedridden with cramps so severe I’d miss work. Painkillers only dulled the agony temporarily.
+      A friend suggested Manu Spakan Mixture, From the first cycle, the spasms eased, and I could function again! Now I drink it daily during my period.
+       It’s not just relief—it’s liberation. Thank you for giving me my life back.`,
+    },
+    {
+      id: 7,
+      name: 'Agartha Osei',
+      text: `After childbirth, my periods returned with heavy bleeding and mood swings. Manu Spakan Mixture became my sanctuary.
+      It lightened the flow, stabilized my energy, and soothed my nerves. I’m now a calmer mom and a stronger woman. Every uterus deserves this kind of care.`,
+    },
+    {
+      id: 8,
+      name: 'Collins Dapaah',
+      text: `At 45, stress and late nights left me drained—physically and intimately. I dreaded gym sessions and felt disconnected from my wife. Manu Lippan Mixture changed everything.
+      Within weeks, my energy skyrocketed, and my focus sharpened. My wife jokes that I’ve ‘rewound the clock.’ Now I’m crushing work deadlines and rekindling romance. This mix isn’t just a supplement—it’s a lifeline.`,
+    },
+    {
+      id: 9,
+      name: 'Samuel Stone',
+      text: `Low testosterone made me feel invisible. I avoided social events and doubted myself daily. My sister gifted me Manu Lippan Mixture.
+      Slowly, my confidence returned—my workouts intensified, and I started dating again. Last month, I landed a promotion and a second date.
+      This mix didn’t just boost my vitality—it rebuilt my spirit.`,
     },
   ];
 
