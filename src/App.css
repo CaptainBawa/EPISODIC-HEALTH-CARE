@@ -140,7 +140,7 @@ header button {
   }
 
   .sub-banners-container img {
-    width: 48%;
+    width: 47%;
   }
 
   .products-container {
@@ -159,7 +159,7 @@ header button {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    width: 48%;
+    width: 47%;
     margin-bottom: 4%;
     padding: .3em;
     background: #f5f5f5;
