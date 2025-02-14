@@ -113,7 +113,7 @@ header button {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5%;
+    gap: 2%;
     margin: 2% auto;
   }
 
@@ -140,7 +140,7 @@ header button {
   }
 
   .sub-banners-container img {
-    width: 45%;
+    width: 48%;
   }
 
   .products-container {
@@ -159,7 +159,7 @@ header button {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    width: 47%;
+    width: 48%;
     margin-bottom: 4%;
     padding: .3em;
     background: #f5f5f5;
