@@ -10,6 +10,7 @@ import service from '../assets/service.png';
 import drugs from '../assets/drugs.jpg';
 import lip from '../assets/lip.png';
 import award from '../assets/award.png';
+import advice from '../assets/advice.png';
 
 const CarouselSlider = () => (
   <section>
@@ -19,6 +20,9 @@ const CarouselSlider = () => (
       </div>
       <div className="carousel_img_container">
         <img src={lip} alt="banner" />
+      </div>
+      <div className="carousel_img_container">
+        <img src={advice} alt="banner" />
       </div>
     </Carousel>
     <div className="buttons-container">
