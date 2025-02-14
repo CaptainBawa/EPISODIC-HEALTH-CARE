@@ -11,10 +11,18 @@ import lip from '../assets/lip.png';
 import award from '../assets/award.png';
 import advice from '../assets/advice.png';
 import center from '../assets/center.png';
+import woman from '../assets/woman.png';
+import combo from '../assets/combo.png';
 
 const CarouselSlider = () => (
   <section>
     <Carousel showThumbs={false} showArrows infiniteLoop autoPlay interval={8000}>
+      <div className="carousel_img_container">
+        <img src={combo} alt="banner" />
+      </div>
+      <div className="carousel_img_container">
+        <img src={woman} alt="banner" />
+      </div>
       <div className="carousel_img_container">
         <img src={holi} alt="banner" />
       </div>
