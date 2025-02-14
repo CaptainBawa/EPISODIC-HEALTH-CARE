@@ -7,18 +7,22 @@ import payment from '../assets/payment.png';
 import shop from '../assets/shop.png';
 import help from '../assets/help.png';
 import service from '../assets/service.png';
-import drug from '../assets/drug.jpg';
-import drugs from '../assets/drugs.jpg';
 import lip from '../assets/lip.png';
+import award from '../assets/award.png';
+import advice from '../assets/advice.png';
+import center from '../assets/center.png';
 
 const CarouselSlider = () => (
   <section>
-    <Carousel showThumbs={false} showArrows infiniteLoop autoPlay interval={5000}>
+    <Carousel showThumbs={false} showArrows infiniteLoop autoPlay interval={8000}>
       <div className="carousel_img_container">
         <img src={holi} alt="banner" />
       </div>
       <div className="carousel_img_container">
         <img src={lip} alt="banner" />
+      </div>
+      <div className="carousel_img_container">
+        <img src={advice} alt="banner" />
       </div>
     </Carousel>
     <div className="buttons-container">
@@ -44,8 +48,8 @@ const CarouselSlider = () => (
       </div>
     </div>
     <div className="sub-banners-container">
-      <img src={drug} alt="manu mixture banner" />
-      <img src={drugs} alt="spakan mixture banner" />
+      <img src={award} alt="award winning banner" />
+      <img src={center} alt="production center banner" />
     </div>
   </section>
 );
