@@ -14,7 +14,7 @@ import advice from '../assets/advice.png';
 
 const CarouselSlider = () => (
   <section>
-    <Carousel showThumbs={false} showArrows infiniteLoop autoPlay interval={5000}>
+    <Carousel showThumbs={false} showArrows infiniteLoop autoPlay interval={8000}>
       <div className="carousel_img_container">
         <img src={holi} alt="banner" />
       </div>
