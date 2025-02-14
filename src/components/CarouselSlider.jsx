@@ -7,10 +7,10 @@ import payment from '../assets/payment.png';
 import shop from '../assets/shop.png';
 import help from '../assets/help.png';
 import service from '../assets/service.png';
-import drugs from '../assets/drugs.jpg';
 import lip from '../assets/lip.png';
 import award from '../assets/award.png';
 import advice from '../assets/advice.png';
+import center from '../assets/center.png';
 
 const CarouselSlider = () => (
   <section>
@@ -49,7 +49,7 @@ const CarouselSlider = () => (
     </div>
     <div className="sub-banners-container">
       <img src={award} alt="award winning banner" />
-      <img src={drugs} alt="spakan mixture banner" />
+      <img src={center} alt="production center banner" />
     </div>
   </section>
 );
