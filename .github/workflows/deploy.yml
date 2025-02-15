@@ -31,4 +31,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT || '21' }}
           local-dir: ./dist/
-          server-dir: ./episodichealthcare.com/
+          server-dir: ./
