@@ -32,4 +32,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT || '21' }}
           local-dir: ./dist/
-          server-dir: ./datcvryk/episodichealthcare.com/  # Double-check this path!
+          server-dir: ./episodichealthcare.com/  # Double-check this path!
