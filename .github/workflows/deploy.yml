@@ -25,7 +25,7 @@ jobs:
 
       - name: Deploy to Namecheap via FTP/SFTP
         # Use lowercase for the action name and specify a valid version (e.g., 4.3.4):
-        uses: samkirkland/ftp-deploy-action@v4
+        uses: samkirkland/ftp-deploy-action@v4.3.4
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
