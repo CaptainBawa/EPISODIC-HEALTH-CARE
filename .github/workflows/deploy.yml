@@ -24,12 +24,12 @@ jobs:
         run: npm run build
 
       - name: Deploy to Namecheap via FTP/SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        # Use lowercase for the action name and specify a valid version (e.g., 4.3.4):
+        uses: samkirkland/ftp-deploy-action@4.3.4
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT || '21' }}
           local-dir: ./build/
-          # Target the addon domain's directory:
-          server-dir: ./datcvryk/episodichealthcare.com
+          server-dir: ./datcvryk/episodichealthcare.com/  # Double-check this path!
