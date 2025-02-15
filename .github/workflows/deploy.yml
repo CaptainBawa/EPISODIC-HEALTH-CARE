@@ -24,7 +24,6 @@ jobs:
         run: npm run build
 
       - name: Deploy to Namecheap via FTP/SFTP
-        # Use lowercase for the action name and specify a valid version (e.g., 4.3.4):
         uses: samkirkland/ftp-deploy-action@v4.3.4
         with:
           server: ${{ secrets.FTP_HOST }}
@@ -32,4 +31,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT || '21' }}
           local-dir: ./dist/
-          server-dir: ./episodichealthcare.com/  # Double-check this path!
+          server-dir: ./episodichealthcare.com/
