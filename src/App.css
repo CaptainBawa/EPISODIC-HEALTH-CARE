@@ -785,9 +785,6 @@ footer p:last-child {
     margin-bottom: 2rem;
   }
   
-  .testimonies {
-    padding: 3rem;
-  }
   .testimony {
     flex: 0 0 calc(50% - 2rem);
   }
@@ -799,7 +796,7 @@ footer p:last-child {
 
 @media (min-width: 1024px) {
   header {
-    padding: 1rem 3rem;
+    padding: 0.5rem 2.5rem;
   }
   header img {
     width: 5rem;
@@ -818,13 +815,45 @@ footer p:last-child {
   }
   
   .menu-items {
-    width: 25%;
-    top: 4.5rem;
-    right: 3rem;
+    display: flex !important;
+    position: relative;
+    background-color: transparent;
+    box-shadow: none;
+    top: 0;
+    right: 0;
+    width: 50%;
   }
-  
-  .buttons-container {
-    padding: 0 5%;
+
+.menu-items ul {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  gap: 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+header h3 {
+  position: absolute;
+  left: 9rem;
+  font-size: 2rem;
+}
+
+  .menu-icon,
+  header .background {
+    display: none !important;
+  }
+
+  .buy-button {
+    width: 40%;
+  }
+
+  .price {
+    font-size: 1.2em;
+  }
+
+  .buttons-container div h4 {
+    font-size: 1.1rem;
   }
   
   .products-container {
@@ -832,16 +861,13 @@ footer p:last-child {
     justify-content: space-between;
   }
   .card {
-    width: 22%;
+    width: 24%;
     margin-bottom: 2rem;
   }
   .product-list {
     grid-template-columns: repeat(4, 1fr);
   }
   
-  .testimonies {
-    padding: 4rem;
-  }
   .testimony {
     flex: 0 0 calc(33.333% - 2rem); 
   }
