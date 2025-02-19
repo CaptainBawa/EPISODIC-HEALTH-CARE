@@ -27,16 +27,14 @@ const Header = () => {
           )}
         </button>
       </div>
-      {menuOpen && (
-        <div className={`menu-items ${menuOpen ? 'open' : ''}`}>
-          <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#location">Location</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      )}
+      <div className={`menu-items ${menuOpen ? 'open' : ''}`}>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </header>
   );
 };
