@@ -801,7 +801,7 @@ footer p:last-child {
 
 @media (min-width: 1024px) {
   header {
-    padding: 0.5rem 2.5rem;
+    padding: 0.5rem 8rem;
   }
   header img {
     width: 5rem;
@@ -833,14 +833,14 @@ footer p:last-child {
   display: flex;
   flex-direction: row;
   margin-left: auto;
-  gap: 2rem;
+  gap: 1.2rem;
   font-size: 1.6rem;
   font-weight: 700;
 }
 
 header h3 {
   position: absolute;
-  left: 9rem;
+  left: 14rem;
   font-size: 2rem;
 }
 
