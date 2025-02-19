@@ -11,8 +11,8 @@ import scan1 from '../assets/scan1.jpg';
 import despen4 from '../assets/despen4.jpg';
 import opd4 from '../assets/opd4.jpg';
 import pro3 from '../assets/pro3.jpg';
-import pro6 from '../assets/pro6.jpg';
-import pro9 from '../assets/pro9.jpg';
+// import pro6 from '../assets/pro6.jpg';
+// import pro9 from '../assets/pro9.jpg';
 import despen3 from '../assets/despen3.jpg';
 import lab2 from '../assets/lab2.jpg';
 import opd3 from '../assets/opd3.jpg';
@@ -22,7 +22,7 @@ import pro1 from '../assets/pro1.jpg';
 import pro4 from '../assets/pro4.jpg';
 import pro5 from '../assets/pro5.jpg';
 import pro7 from '../assets/pro7.jpg';
-import pro8 from '../assets/pro8.jpg';
+// import pro8 from '../assets/pro8.jpg';
 
 const Gallery = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -91,12 +91,12 @@ const Gallery = () => {
     {
       id: 13,
       title: 'PRODUCTION CENTER',
-      img: pro6,
+      img: pro3,
     },
     {
       id: 14,
       title: 'PRODUCTION CENTER',
-      img: pro9,
+      img: pro3,
     },
     {
       id: 15,
@@ -146,7 +146,7 @@ const Gallery = () => {
     {
       id: 24,
       title: 'PRODUCTION CENTER',
-      img: pro8,
+      img: pro7,
     },
   ];
 
