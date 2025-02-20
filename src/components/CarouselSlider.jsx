@@ -1,36 +1,18 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import holi from '../assets/holi.png';
 import delivery from '../assets/delivery.png';
 import payment from '../assets/payment.png';
 import shop from '../assets/shop.png';
 import help from '../assets/help.png';
 import service from '../assets/service.png';
-import lip from '../assets/lip.png';
-import award from '../assets/award.png';
-import advice from '../assets/advice.png';
-import center from '../assets/center.png';
-import woman from '../assets/woman.png';
-import combo from '../assets/combo.png';
+import boafo from '../assets/boafo.jpg';
 
 const CarouselSlider = () => (
   <section>
     <Carousel showThumbs={false} showArrows infiniteLoop autoPlay interval={8000}>
       <div className="carousel_img_container">
-        <img src={combo} alt="banner" />
-      </div>
-      <div className="carousel_img_container">
-        <img src={woman} alt="banner" />
-      </div>
-      <div className="carousel_img_container">
-        <img src={holi} alt="banner" />
-      </div>
-      <div className="carousel_img_container">
-        <img src={lip} alt="banner" />
-      </div>
-      <div className="carousel_img_container">
-        <img src={advice} alt="banner" />
+        <img src={boafo} alt="banner" />
       </div>
     </Carousel>
     <div className="buttons-container">
@@ -54,10 +36,6 @@ const CarouselSlider = () => (
         <img src={service} alt="service" />
         <h4>Friendly Services</h4>
       </div>
-    </div>
-    <div className="sub-banners-container">
-      <img src={award} alt="award winning banner" />
-      <img src={center} alt="production center banner" />
     </div>
   </section>
 );

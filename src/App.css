@@ -409,7 +409,12 @@ header button {
 }
 
 header h3 {
-  font-size: 1.4rem;
+  color: #3498db;
+  font-size: 1.2rem;
+}
+
+header h5 {
+  font-size: 0.7rem;
 }
 
 .order-note {
@@ -834,14 +839,16 @@ footer p:last-child {
   flex-direction: row;
   margin-left: auto;
   gap: 0.7rem;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 
+.header-text {
+  margin-right: auto;
+}
+
 header h3 {
-  position: absolute;
-  left: 9rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
   header .menu-icon,

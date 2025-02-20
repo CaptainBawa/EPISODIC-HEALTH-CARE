@@ -8,21 +8,11 @@ const About = () => {
     setIsExpanded((prevState) => !prevState);
   };
 
-  const fullText = `Episodic health care center is a registered herbal clinic
-  established to deliver quick and quality health services through the use of traditional and holistic approach,
-  it was established in the year 2012 on the soil of Dunkwa On Offin in the Upper Denkyira East municipality by collaboration of 4
-  holistic and alternative health care practitioners. We are able to manage and treat many of the diseases
-  and disorders affecting the normal functioning of human system through the use of unified efficacious and registered herbal
-  and alternative medicine. We also run the following services to our client who always choose us as their treatment center:
-  1. Ultrasound/Scan.
-  2. Laboratory.
-  3. Detoxification.
-  4. Physiotherapy center.
-  5. Dietary Advice.
-  We have our own manufacturing facility where our herbal medicine are also produced and packaged for our clients.
-  We produce many herbal products into the market base from time to time for the public especially to those who find it difficulty
-  to reach us for our services. We are located at Dunkwa On Offin adjecent to the old E.C.G office near kyekyewere station.
-  We work from Monday - Saturday from 7:00am - 5:00pm.`;
+  const fullText = `Welcome to Boafo Adom Nyame Apple & Grapes Wholesale and Retail Enterprise—your premier source for the finest apples and grapes available on the market.
+  With a rich heritage in the fruit industry and an unwavering commitment to quality, we pride ourselves on delivering exceptional produce that delights both wholesalers and individual consumers.
+  Our journey began with a simple belief: that nature’s bounty deserves to be shared with the highest standards of excellence. Sourcing our fruits directly from trusted orchards and vineyards,
+  we ensure that every apple and grape meets our rigorous quality benchmarks. From hand-picked harvesting to meticulous quality control, our process is designed to capture the true essence and
+  flavor of each fruit, ensuring that you receive nothing but the best.`;
 
   // Define how many characters to show when not expanded
   const charLimit = 250;

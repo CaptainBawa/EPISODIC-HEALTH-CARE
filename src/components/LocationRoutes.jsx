@@ -1,26 +1,26 @@
 const locationRoutes = [
   {
-    from: 'Kyekyewere Station',
+    from: 'Atecheam',
     steps: [
-      'Head toward Old ECG',
-      'Pass Old ECG building and ask for Asante Kramo Drugstore',
-      "We're opposite Asante Kramo Drugstore",
+      'Take a taxi and ask the driver to drop you off at Central Market',
+      'Ask for Nzulu Store and walk in that direction',
+      "We're Bahind Nzulu Store Dwakesiem",
     ],
   },
   {
-    from: 'Central Market',
+    from: 'Kyekyewere Station',
     steps: [
-      'Take a taxi and ask the driver to drop you off at BOT',
-      'Ask for Asante Kramo Drugstore and walk in that direction',
-      "We're opposite Asante Kramo Drugstore",
+      'Take a taxi and ask the driver to drop you off at Central Market',
+      'Ask for Nzulu Store and walk in that direction',
+      "We're Bahind Nzulu Store Dwakesiem",
     ],
   },
   {
     from: 'Kumasi Station',
     steps: [
-      'Take a taxi and ask the driver to drop you off at Kwalas Junction',
-      'Ask for Asante Kramo Drugstore and walk in that direction',
-      "We're opposite Asante Kramo Drugstore",
+      'Take a taxi and ask the driver to drop you off at Central Market',
+      'Ask for Nzulu Storeand walk in that direction',
+      "We're Bahind Nzulu Store Dwakesiem",
     ],
   },
 ];

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ehc from '../assets/ehc.png';
+import apple from '../assets/apple.png';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,9 +11,12 @@ const Header = () => {
   return (
     <header>
       <div>
-        <img src={ehc} alt="Episodic Health Care" />
+        <img src={apple} alt="Episodic Health Care" />
       </div>
-      <h3>Episodic Health Care</h3>
+      <div className="header-text">
+        <h3>Boafo Adom Nyame Ent.</h3>
+        <h5>Wholesale and Retails of Apple and Gripes</h5>
+      </div>
       <div className="background">
         <button type="button" className="menu-icon" onClick={toggleMenu}>
           {menuOpen ? (

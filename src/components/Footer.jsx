@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => (
   <footer>
     <p>Developed and Designed by</p>
-    <p>Easing Life Group of Companies. 0240095360</p>
+    <p>Captain Bawa. 0546006938 | 0241263281</p>
   </footer>
 );
 

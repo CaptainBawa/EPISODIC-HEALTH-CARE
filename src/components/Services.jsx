@@ -4,17 +4,9 @@ const Services = () => (
   <div id="services">
     <h2>Services</h2>
     <ul>
-      <li>General Health Care</li>
+      <li>Apple</li>
       {' | '}
-      <li>Ultrasound/Scan Center</li>
-      {' | '}
-      <li>Laboratory</li>
-      {' | '}
-      <li>Physiotherapy</li>
-      {' | '}
-      <li>Detoxification</li>
-      {' | '}
-      <li>Dietary Advice</li>
+      <li>Grapes</li>
     </ul>
   </div>
 );
