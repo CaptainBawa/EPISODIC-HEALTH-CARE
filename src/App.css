@@ -1,3 +1,5 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
 *,
 *::before,
 *::after {
@@ -173,9 +175,9 @@ header button {
    }
 
    .card-img {
-    background-color: #ffcaa6;
+    /* background-color: #ffcaa6; */
     width: 100%;
-    border-radius: .5rem;
+    /* border-radius: .5rem; */
     transition: .3s ease;
    }
 
@@ -438,8 +440,7 @@ header h3 {
 
 .route-card,
 #contact,
-#about,
-#services {
+#about {
   background: #fff;
   border-radius: 10px;
   padding: 1rem;
@@ -503,19 +504,92 @@ header h3 {
 }
 
 #contact,
-#about,
-#services {
+#about {
   width: 91%;
   margin: auto auto 1rem auto;
   text-align: center;
   padding: 0.5rem;
 }
 
-#services ul {
+.contact-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.3rem;
+  gap: 1rem;
+  align-items: center;
   justify-content: center;
+}
+
+.contact-image {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-info {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-info h3 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-detail {
+  font-size: 1.1rem;
+  color: #34495e;
+  margin-bottom: 0.8rem;
+}
+
+.contact-address {
+  color: #7f8c8d;
+  font-style: normal;
+}
+
+#services {
+  padding: 2rem 0.3rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  width: 45%;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-card i {
+  color: #3498db;
+  margin-bottom: 1.5rem;
+}
+
+.service-card p {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 footer {
@@ -809,14 +883,9 @@ footer p:last-child {
 
   .contact-services-about {
     display: flex;
+    flex-direction: column;
     margin: 0 auto;
     width: 92%;
-  }
-
-  #contact,
-  #about,
-  #services {
-    width: 32%;
   }
   
   .menu-items {
@@ -901,5 +970,9 @@ header h3 {
   .admin-panel {
     margin: 3rem auto;
     padding: 0 2rem;
+  }
+
+  #services {
+    margin-bottom: 1rem;
   }
 }
