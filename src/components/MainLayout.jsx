@@ -16,13 +16,13 @@ const MainLayout = () => (
     <Header />
     <CarouselSlider />
     <Products />
+    <Services />
     <Testimonies />
     <Gallery />
     <HealthcareDirections routes={locationRoutes} />
     <div className="contact-services-about">
-      <Contact />
-      <Services />
       <About />
+      <Contact />
     </div>
     <Footer />
   </>
